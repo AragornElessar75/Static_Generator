@@ -16,12 +16,12 @@ class TestTextNode(unittest.TestCase):
 
     def test_neq_text_type(self):
         node = TextNode("This is not a text node", TextType.BOLD)
-        node2 = TextNode("This is not a text node", TextType.PLAIN)
+        node2 = TextNode("This is not a text node", TextType.TEXT)
         self.assertNotEqual(node, node2)
 
     def test_neq_url(self):
-        node = TextNode("This is not a text node", TextType.PLAIN)
-        node2 = TextNode("This is not a text node", TextType.PLAIN, "https://www.boot.dev")
+        node = TextNode("This is not a text node", TextType.TEXT)
+        node2 = TextNode("This is not a text node", TextType.TEXT, "https://www.boot.dev")
         self.assertNotEqual(node, node2)
 
 
