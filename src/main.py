@@ -1,9 +1,12 @@
-from textnode import TextNode, TextType
+import os
 
+from copystatic import cleanup_public, copy_static_to_public
 
+destination = (os.path.realpath("public"))
+source = (os.path.realpath("static"))
 def main():
-    print(TextNode("This is some anchor text", TextType.LINK, "https://www.boot.dev"))
-
+    cleanup_public(destination)
+    copy_static_to_public(source, destination)
 
 if __name__ == "__main__":
     main()
