@@ -8,7 +8,7 @@ if len(sys.argv) > 1:
     basepath = sys.argv[1]
 else:
     basepath = "/"
-destination = (os.path.realpath("public"))
+destination = (os.path.realpath("docs"))
 source = (os.path.realpath("static"))
 from_dir_path = (os.path.realpath("content"))
 template_path = (os.path.realpath("template.html"))
